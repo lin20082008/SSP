@@ -19,9 +19,9 @@ tf.app.flags.DEFINE_integer('steps_to_validate', 1000,
                             'Steps to validate and print loss')
 
 # For distributed
-tf.app.flags.DEFINE_string("ps_hosts", "172.20.181.16:2222",
+tf.app.flags.DEFINE_string("ps_hosts", "172.172.0.10:10000",
                            "Comma-separated list of hostname:port pairs")
-tf.app.flags.DEFINE_string("worker_hosts", "172.20.181.16:2224",
+tf.app.flags.DEFINE_string("worker_hosts", "172.172.0.11:10001,172.172.0.12:10002,172.172.0.13:10003",
                            "Comma-separated list of hostname:port pairs")
 tf.app.flags.DEFINE_string("job_name", "worker", "One of 'ps', 'worker'")
 tf.app.flags.DEFINE_integer("task_index", 0, "Index of task within the job")
